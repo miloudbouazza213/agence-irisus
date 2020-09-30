@@ -12,6 +12,7 @@ window.onload = function() {
         
 
         const logo = this.document.getElementById('logo');
+        const imgFond = document.getElementById('img-fond');
         const root = document.documentElement;
 
         const imgsReseau = this.document.querySelectorAll('.img-reseau');
@@ -23,10 +24,10 @@ window.onload = function() {
                 root.style.setProperty('--couleur-principale','#fff');
                 root.style.setProperty('--couleur-secondaire','#000');
                 root.style.setProperty('--couleur-ombre','rgba(0,0,0,0.1)');
-                logo.style.filter = 'invert(1)'; 
-                // imgsReseau[0].style.filter('invert(1)');    
-                // imgsReseau[1].style.filter('invert(1)');    
-                // imgsReseau[2].style.filter('invert(1)');    
+                logo.style.filter = 'invert(1)';
+                imgFond.style.filter = 'invert(1)';
+                root.style.setProperty('--inversion','1');
+
                  }
             else {
                 // passage en noir
@@ -34,11 +35,10 @@ window.onload = function() {
                 root.style.setProperty('--couleur-principale','#000');
                 root.style.setProperty('--couleur-ombre','rgba(255,255,255,0.1)');
                 logo.style.filter = 'invert(0)'; 
-                // imgsReseau[0].style.filter('invert(0)');    
-                // imgsReseau[1].style.filter('invert(0)');    
-                // imgsReseau[2].style.filter('invert(0)');  
+                imgFond.style.filter = 'invert(0)'; 
+                root.style.setProperty('--inversion','0');
+                
             }
-            // switchBarre.classList.toggle('switched');
             switchCercle.classList.toggle('switched');
             
         })
