@@ -58,6 +58,18 @@ body {
 	background: var(--fond-principal);
 }
 
+/* curseur */
+.curseur {
+	position: absolute;
+	top:-100px;
+	left: -100px;
+	width: 40px;
+	height: 40px;
+	border-radius: 50%;
+	border: 2px solid var(--couleur-secondaire);
+	transform: translate(-50%,-50%);
+}
+
 
 /* Navigation ================================================== */
  
@@ -450,6 +462,10 @@ body.nav-active .nav__list-item:nth-child(10) {
 	background: var(--couleur-principale);
 }
 
+.switch-cercle:hover {
+	width: 55px;
+	height: 55px;
+}
 /* responsive : */
 @media screen and (max-width: 700px) {
     #switch-barre {
