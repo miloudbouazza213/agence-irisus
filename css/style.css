@@ -79,10 +79,10 @@ body {
     pointer-events: none;
   }
   .cursor--small {
-    width: 5px;
-    height: 5px;
-    left: -2.5px;
-    top: -2.5px;
+    width: 10px;
+    height: 10px;
+    left: -5px;
+    top: -5px;
     border-radius: 50%;
     z-index: 11000;
     background: var(--couleur-secondaire);

@@ -26,7 +26,7 @@ window.onload = function () {
             logo.style.filter = 'invert(1)';
             imgFond.style.filter = 'invert(1)';
             root.style.setProperty('--inversion', '1');
-            rectangle.strokeColor = "(0,0,0,0.7)"; // couleur dessin du 2eme cercle du curseur
+            rectangle.strokeColor = "rgb(0,0,0,0.7)"; // couleur dessin du 2eme cercle du curseur
 
         }
         else {
@@ -37,7 +37,7 @@ window.onload = function () {
             logo.style.filter = 'invert(0)';
             imgFond.style.filter = 'invert(0)';
             root.style.setProperty('--inversion', '0');
-            rectangle.strokeColor = "gba(255,255,255,0.7)"; // couleur dessin du 2eme cercle du curseur
+            rectangle.strokeColor = "rgb(255,255,255,0.7)"; // couleur dessin du 2eme cercle du curseur
 
         }
         switchCercle.classList.toggle('switched');
@@ -92,8 +92,7 @@ window.onload = function () {
 
     let lastX = 0;
     let lastY = 0;
-    let isStuck = false;
-    let group, stuckX, stuckY, fillOuterCursor;
+    let group ;
 
     const initCanvas = () => {
         const canvas = document.querySelector(".cursor--canvas");
@@ -101,7 +100,7 @@ window.onload = function () {
         const strokeWidth = 2;
 
         rectangle = new paper.Path.Rectangle(
-            new paper.Rectangle(lastX, lastY, 40, 40), (10, 10)
+            new paper.Rectangle(lastX, lastY, 60, 60), (30, 30)
         );
 
         rectangle.strokeColor = "rgba(255,255,255,0.7)";
@@ -109,12 +108,10 @@ window.onload = function () {
         group = new paper.Group([rectangle]);
         group.applyMatrix = false;
 
-
         // function for linear interpolation of values
         const lerp = (a, b, n) => {
             return (1 - n) * a + n * b;
         };
-
 
 
         // the draw loop of Paper.js
@@ -123,55 +120,15 @@ window.onload = function () {
             // using linear interpolation, the circle will move 0.2 (20%)
             // of the distance between its current position and the mouse
             // coordinates per Frame
-            if (!isStuck) {
 
-                lastX = lerp(lastX, clientX, 0.2);
-                lastY = lerp(lastY, clientY, 0.2);
+                lastX = lerp(lastX, clientX, 0.3);
+                lastY = lerp(lastY, clientY, 0.3);
                 group.position = new paper.Point(lastX, lastY);
-                rectangle.bounds.width = 40;
-                rectangle.bounds.height = 40;
-            } else if (isStuck) {
 
-
-                lastX = lerp(lastX, stuckX, 0.2);
-                lastY = lerp(lastY, stuckY, 0.2);
-                group.position = new paper.Point(stuckX, stuckY);
-                rectangle.bounds.width = taille[0] + 30;
-                rectangle.bounds.height = taille[1] + 30;
-            }
         };
     };
 
     initCanvas();
-
-    const initHovers = () => {
-
-        const handleMouseEnter = e => {
-            const navItem = e.currentTarget;
-            const navItemBox = navItem.getBoundingClientRect();
-            stuckX = Math.round(navItemBox.left + navItemBox.width / 2);
-            stuckY = Math.round(navItemBox.top + navItemBox.height / 2);
-            isStuck = true;
-
-            taille = [navItemBox.right - navItemBox.left, navItemBox.bottom - navItemBox.top];
-
-        };
-
-        // reset isStuck on mouseLeave
-        const handleMouseLeave = () => {
-            isStuck = false;
-        };
-
-        // add event listeners to all items
-        const linkItems = document.querySelectorAll(".interact");
-        linkItems.forEach(item => {
-            item.addEventListener("mouseenter", handleMouseEnter);
-            item.addEventListener("mouseleave", handleMouseLeave);
-        });
-    };
-
-    initHovers();
-
 
 
 }
