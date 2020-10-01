@@ -94,8 +94,17 @@ body {
   }
 
   /* classe permettant l'interaction avec le curseur */
-  .interact {
-	  
+  .interact:hover {
+	 animation:  1s linear 1s infinite alternate selection;
+  }
+
+  @keyframes selection {
+	  from {
+		  opacity: 1;
+	  }
+	  to {
+		  opacity: 0.5;
+	  }
   }
 
 /* Navigation ================================================== */
