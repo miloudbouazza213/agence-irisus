@@ -513,7 +513,7 @@ body.nav-active .nav__list-item:nth-child(10) {
 	.switched {	
 		transform: translateX(30px);
 	}
-	
+
 	.hr-vertical {
 		width: 60%;
 		height: 0;

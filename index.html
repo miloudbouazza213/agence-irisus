@@ -10,12 +10,10 @@
 
 <body>
     <div class="img-fond" id="img-fond"></div>
-    <!-- version simple du curseur -->
-    <!-- <div class="curseur"></div> -->
 
     <!-- curseur 2eme version -->
     <div class="cursor cursor--small"></div>
-        <canvas class="cursor cursor--canvas" resize></canvas>
+    <canvas class="cursor cursor--canvas" resize></canvas>
 
 
     <header id=header>
@@ -35,7 +33,7 @@
     </header>
 
     <div class="nav">
-       
+
         <div class="nav__content">
             <ul class="nav__list">
                 <li class="nav__list-item active-nav"><a href="#" class="hover-target">Histoire</a></li>
@@ -48,44 +46,47 @@
                 </li>
                 <li class="nav__list-item"><a href="#" class="hover-target">Contact</a></li>
                 <li class="nav__list-item">
-                    <div class="nav__info">
-                        <!-- mention legale info et reseau sociaux -->
+
+                    <!-- mention legale info et reseau sociaux -->
+                    <div class="nav__info">                   
                         <a href="#">Mentions Légales</a>
                         <hr class="hr-vertical">
                         <div class="reseau">
                             <a href="#"><img class="img-reseau" src="images/picto/facebook.png" alt="lien facebook"></a>
-                            <a href="#"><img class="img-reseau" src="images/picto/instagram.png" alt="lien instagram"></a>
+                            <a href="#"><img class="img-reseau" src="images/picto/instagram.png"
+                                    alt="lien instagram"></a>
                             <a href="#"><img class="img-reseau" src="images/picto/linkedin.png" alt="lien linkedin"></a>
                         </div>
-
                     </div>
+                    <!-- /fin mention legale et reseau -->
+
                 </li>
             </ul>
 
         </div>
     </div>
 
-    <section id="contenu-principal">
         <!-- contenu principal -->
+    <section id="contenu-principal">
     </section>
+    <!-- /fin contenu principal -->
 
-    <!-- footer avec switch couleur et langue-->
+    <!-- footer avec switch couleur et languev et script-->
     <footer id="footer">
         <div class="switch-couleur">
-            <div id="switch-barre" >
+            <div id="switch-barre">
             </div>
             <div id="switch-cercle" class="interact"></div>
         </div>
         <div class="switch-langue">
             <div id="lang-fr">FR</span> / <span class="langue-non-selectionnee" id="lang-en">EN</span>
-        </div>
+            </div>
 
-        <!-- script utilisé -->
-        <!-- <script src="js/curseur.js"></script> -->
-        <!-- curseur -->
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/paper.js/0.12.0/paper-core.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/simplex-noise/2.4.0/simplex-noise.min.js"></script>
-    
+            <!-- script utilisé -->
+            <!-- pour curseur -->
+            <script src="https://cdnjs.cloudflare.com/ajax/libs/paper.js/0.12.0/paper-core.min.js"></script>
+            <script src="https://cdnjs.cloudflare.com/ajax/libs/simplex-noise/2.4.0/simplex-noise.min.js"></script>
+
     </footer>
 
 </body>
