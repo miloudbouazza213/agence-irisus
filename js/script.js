@@ -92,7 +92,7 @@ window.onload = function () {
 
     let lastX = 0;
     let lastY = 0;
-    let group ;
+    let group;
 
     const initCanvas = () => {
         const canvas = document.querySelector(".cursor--canvas");
@@ -121,9 +121,9 @@ window.onload = function () {
             // of the distance between its current position and the mouse
             // coordinates per Frame
 
-                lastX = lerp(lastX, clientX, 0.3);
-                lastY = lerp(lastY, clientY, 0.3);
-                group.position = new paper.Point(lastX, lastY);
+            lastX = lerp(lastX, clientX, 0.3);
+            lastY = lerp(lastY, clientY, 0.3);
+            group.position = new paper.Point(lastX, lastY);
 
         };
     };

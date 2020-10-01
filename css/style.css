@@ -84,18 +84,18 @@ body {
     left: -5px;
     top: -5px;
     border-radius: 50%;
-    z-index: 11000;
+    z-index: 110;
     background: var(--couleur-secondaire);
   }
   .cursor--canvas {
-    width: 100vw;
-    height: 100vh;
-    z-index: 12000;
+    width: 100%;
+    height: 100%;
+    z-index: 120;
   }
 
   /* classe permettant l'interaction avec le curseur */
   .interact:hover {
-	 animation:  1s linear 1s infinite alternate selection;
+	 animation:  1s linear 0s infinite alternate selection;
   }
 
   @keyframes selection {
