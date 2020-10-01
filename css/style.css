@@ -14,6 +14,7 @@ body {
     background-color: var(--couleur-principale);
 	color: var(--couleur-secondaire);
 	margin: 0;
+	cursor: none;
 }
 
 .body-blanc {
@@ -70,6 +71,32 @@ body {
 	transform: translate(-50%,-50%);
 }
 
+  /* curseur */
+  .cursor {
+    position: fixed;
+    left: 0;
+    top: 0;
+    pointer-events: none;
+  }
+  .cursor--small {
+    width: 5px;
+    height: 5px;
+    left: -2.5px;
+    top: -2.5px;
+    border-radius: 50%;
+    z-index: 11000;
+    background: var(--couleur-secondaire);
+  }
+  .cursor--canvas {
+    width: 100vw;
+    height: 100vh;
+    z-index: 12000;
+  }
+
+  /* classe permettant l'interaction avec le curseur */
+  .interact {
+	  
+  }
 
 /* Navigation ================================================== */
  
@@ -481,6 +508,10 @@ body.nav-active .nav__list-item:nth-child(10) {
         left: 5%;
         bottom: 100%;
         top: 0;
+	}
+
+	.switched {	
+		transform: translateX(30px);
 	}
 	
 	.hr-vertical {

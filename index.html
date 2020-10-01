@@ -12,12 +12,19 @@
     <div class="img-fond" id="img-fond"></div>
     <!-- version simple du curseur -->
     <!-- <div class="curseur"></div> -->
+
+    <!-- curseur 2eme version -->
+    <div class="cursor cursor--small"></div>
+        <canvas class="cursor cursor--canvas" resize></canvas>
+
+
     <header id=header>
         <div class="header-wrapper">
             <div class="logo-wrap">
-                <a href="#" class="hover-target"><img id="logo" src="images/logo_irisus.png" alt="logo irisus"></a>
+                <a href="#" class="hover-target">
+                    <img class="interact" id="logo" src="images/logo_irisus.png" alt="logo irisus"></a>
             </div>
-            <div class="nav-but-wrap">
+            <div class="nav-but-wrap interact">
                 <div class="menu-icon hover-target">
                     <span class="menu-icon__line menu-icon__line-left"></span>
                     <span class="menu-icon__line"></span>
@@ -65,16 +72,20 @@
     <!-- footer avec switch couleur et langue-->
     <footer id="footer">
         <div class="switch-couleur">
-            <div id="switch-barre" class="hover-target">
+            <div id="switch-barre" >
             </div>
-            <div id="switch-cercle"></div>
+            <div id="switch-cercle" class="interact"></div>
         </div>
         <div class="switch-langue">
             <div id="lang-fr">FR</span> / <span class="langue-non-selectionnee" id="lang-en">EN</span>
         </div>
 
         <!-- script utilisé -->
-        <script src="js/curseur.js"></script>
+        <!-- <script src="js/curseur.js"></script> -->
+        <!-- curseur -->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/paper.js/0.12.0/paper-core.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/simplex-noise/2.4.0/simplex-noise.min.js"></script>
+    
     </footer>
 
 </body>
